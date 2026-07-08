@@ -1,10 +1,10 @@
 # NMF Decomposer for Ableton Live — Manual by Claude
 
 A Max for Live device that splits audio into spectral components using
-FluCoMa's NMF. It builds the components as new tracks in your Set and
+FluCoMa's NMF. It builds the components as new tracks in your Set and/or
 feeds a real-time NMF filter running on the track.
 
-**Requires:** Ableton Live 12.0.5+, Max with FluCoMa installed.
+**Requires:** Ableton Live 12.0.5+, Max for Live with FluCoMa installed.
 **Files:** the device (.amxd) and `nmf-device.js` in the same folder.
 **Tip:** keep the Max Console open — the device narrates every step.
 Analysis is mono: stereo sources use the left channel.
@@ -116,3 +116,7 @@ applied to everything on the track from then on.
 - **Capture ignored:** it was under 0.5 s.
 - **Folder prompt:** the Set was never saved — save it, or pick a
   folder once (remembered for the session). Filter-only never asks.
+
+## 7. Acknowledgements
+- Built with FluCoMa (flucoma.org)
+- Developed with assistance from Claude (Anthropic)
