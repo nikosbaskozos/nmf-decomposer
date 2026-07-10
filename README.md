@@ -46,7 +46,7 @@ In all cases: press **Cmd/Ctrl-G** afterwards to group the new tracks
 | **components** (1-16) | How many layers to split into. |
 | **fast 2-stage** (toggle) | Learn on a ~30 s excerpt instead of the whole file, then apply. Much faster on long files, same kind of output. |
 | **descriptor mode** (toggle) | Output 2 layers instead of N: one chosen by ranking + "rest" (see §3). |
-| **descriptor** (1-4) | Ranking rule: 1=centroid 2=flatness 3=pitch 4=amplitude. |
+| **descriptor** (1-4) | Ranking rule: 1=centroid 2=flatness 3=frequency 4=amplitude. |
 | **keep rank** (1-16) | Which ranked component to isolate. Rank 1 = highest value, last rank = lowest. |
 | **learning slices** (1-32) | 1 = learn from one ~30 s mid-file block. 6-12 = learn from short slices spread evenly across the file (more representative). |
 | **filter-only** (toggle) | No tracks, no files, no folder needed — the run only reloads the real-time filter. Fastest option. |
@@ -66,13 +66,12 @@ exactly two: one picked by ranking, and everything else summed as
 |---|---|---|
 | 1 centroid | brightest | darkest |
 | 2 flatness | noisiest | most tonal |
-| 3 pitch | highest peak | lowest peak |
+| 3 frequency | highest peak | lowest peak |
 | 4 amplitude | loudest | quietest |
 
 Example: 10 components, descriptor 4, keep rank 10 → isolate the
 quietest layer. The console prints the full ranking with scores.
-"Pitch" ranks by each component's strongest spectral peak (a proxy,
-not true pitch tracking).
+"Frequency" ranks by each component's strongest spectral peak.
 
 ---
 
